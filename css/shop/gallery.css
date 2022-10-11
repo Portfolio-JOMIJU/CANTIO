@@ -1,0 +1,115 @@
+*{margin:0; padding:0;}
+
+/* 슬라이드배너 꾸미기 */
+.best_foryou{
+    width: 1320px;
+    margin: auto;
+    text-align: center;
+    font-size: 20px;
+    font-family: 'NanumSquareRound';
+    font-weight: bold;
+    color: #a673ad;
+}
+.swiper-slide h3{
+	font-family: 'SUIT-Regular';
+	font-size: 14px;
+	color: rgb(79, 79, 79);
+	transition: all 0.7s;/*호버 색 서서히 변하게 만들기*/
+}
+.swiper-slide p{
+	font-family: 'SUIT-Regular';
+	font-size: 13px;
+	color: rgb(108, 108, 108);
+}
+.gallery{
+	width: 800px;
+	height:388px;
+	
+	margin: 50px auto; 
+	
+	box-sizing: border-box;
+}
+
+.gallery_inner{
+	width: 100%; 
+	
+}
+.gallery .swiper-slide a{
+	width: 10px;
+   height: 300px;
+	text-align: center;
+    font-size: 10px;
+}		
+.gallery .swiper-slide a:hover h3{
+	color: #a673ad;
+}	  
+.gallery .swiper-slide img {
+	display: block;
+	width: 50%;
+	margin: 10px auto;
+	transition: all 1s;
+    overflow: hidden;
+}
+
+.gallery .swiper-slide.swiper-slide-active .b_img{
+	width: 60%;
+	margin-top: 0;
+}
+
+.gallery .swiper-slide .heart{
+    width: 45px;
+    display: inline-block;
+    margin-left: 33%;
+    opacity: 0.6;
+}
+.gallery .swiper-slide .basket{
+    width: 37px;
+    display: inline-block;
+    opacity: 0.6;
+}
+
+.gallery .swiper-slide .heart:hover{
+    opacity: 1;
+}
+.gallery .swiper-slide .basket:hover{
+    opacity: 1;
+}
+
+
+
+
+/*이동버튼 영역*/
+.gallery .swiper-button-next:after,
+.gallery .swiper-button-prev:after{display:none;}/* 소스에 들어있는 버튼 삭제 */
+/*블릿버튼 영역*/
+.gallery .swiper-pagination-bullet{background:rgb(175, 127, 212); width:10px; height:10px; opacity:0.5;}/* 블릿버튼 크기, 색상, 투명도 */
+.gallery .swiper-pagination-bullet-active{opacity:1;} /* 블릿버튼 페이지 표시날 때 투명도 */
+.gallery .swiper-container-horizontal > .swiper-pagination-bullets{bottom: 10px;}/* 블릿버튼 위치 */
+
+
+/**
+ * ----------------------------------------
+ * animation rotate-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes rotate-center {
+	0% {
+	  -webkit-transform: rotate(0);
+			  transform: rotate(0);
+	}
+	100% {
+	  -webkit-transform: rotate(360deg);
+			  transform: rotate(360deg);
+	}
+  }
+  @keyframes rotate-center {
+	0% {
+	  -webkit-transform: rotate(0);
+			  transform: rotate(0);
+	}
+	100% {
+	  -webkit-transform: rotate(360deg);
+			  transform: rotate(360deg);
+	}
+  }
+  

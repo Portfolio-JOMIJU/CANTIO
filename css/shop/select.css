@@ -1,0 +1,81 @@
+.box{
+  margin: 50px auto;
+  width: 1320px;
+}
+.selectBox2 * { box-sizing: border-box; }
+.selectBox2 {
+  position: relative;
+  width: 150px;
+  height: 35px;
+  border-radius: 20px;
+  border: 3px solid #bc92c4;
+  background: url('.././../images/shop/Sort_heartarrow.png') calc(100% - 7px) center no-repeat;
+  background-size: 20px;
+  cursor: pointer;
+  margin-left: 82%;
+  z-index: 5;
+}
+
+.selectBox2:after {
+  content: '';
+  display: block; 
+  width: 3px;
+  height: 100%; 
+  position: absolute; 
+  top: 0; 
+  right: 35px;
+  background: #bc92c4;
+}
+
+.selectBox2 .label {
+  display: flex;
+  align-items: center;
+  width: inherit;
+  height: inherit;
+  border: 0 none;
+  outline: 0 none;
+  padding-left: 15px;
+  background: transparent;
+  cursor: pointer;
+  color: #bc92c4;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.selectBox2 .optionList {
+  position: absolute; 
+  top: 35px;
+  width: 100%;
+  background: #bc92c4;
+  color: #fff;
+  list-style-type: none;
+  padding: 0;
+  border-radius: 20px;
+  overflow: hidden;
+  max-height: 0;
+  transition: .2s ease-in;
+}
+
+.selectBox2 .optionList::-webkit-scrollbar {width: 6px;}
+.selectBox2 .optionList::-webkit-scrollbar-track {background: transparent; }
+.selectBox2 .optionList::-webkit-scrollbar-thumb {background: #303030; border-radius: 45px;}
+.selectBox2 .optionList::-webkit-scrollbar-thumb:hover {background: #303030;}
+
+.selectBox2.active .optionList {
+  max-height: 500px;
+}
+
+.selectBox2 .optionItem {
+  border-bottom: 1px dashed rgb(255, 255, 255);
+  padding: 5px 15px 5px;
+  transition: .1s;
+  width: 150px;
+}
+
+.selectBox2 .optionItem:hover {
+  background: rgb(208, 133, 165);
+}
+
+.selectBox2 .optionItem:last-child {
+  border-bottom: 0 none;
+}

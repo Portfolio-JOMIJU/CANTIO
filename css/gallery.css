@@ -1,0 +1,188 @@
+*{margin:0; padding:0;}
+
+/* 슬라이드배너 꾸미기 */
+.gallery{
+	width: 1320px;
+	height:595px;
+	
+	margin: 50px auto; 
+	padding: 0 50px 40px;
+	box-sizing: border-box;
+}
+.gallery_inner{
+	width: 100%; 
+	overflow: hidden;
+}
+.gallery .swiper-slide a{
+	width: 100%;
+	height: 100%;
+	
+}			  
+.gallery .swiper-slide img {
+	display: block;
+	width: 80%;
+	margin: 50px auto;
+	transition: all 1s;
+}
+
+.gallery .swiper-slide.swiper-slide-active .b_img{
+	width: 100%;
+	margin-top: 0;
+}
+
+.gallery .swiper-slide.swiper-slide-active div{
+	width: 285px;
+	height: 431px;
+	left: 58px;
+	top: 58px;
+}
+
+.gallery .swiper-slide.swiper-slide-active div a .heart{
+	left: 110px;
+	top: 150px;
+}
+
+.gallery .swiper-slide.swiper-slide-active div a .b_shopoing{
+	bottom: -10px;
+	left: 110px;
+}
+
+.gallery .swiper-slide.swiper-slide-active div a .buy{
+	bottom: -10px;
+	left: 150px;
+}
+
+.gallery .swiper-slide.swiper-slide-active div h3{
+	left: 65px;
+	top: 300px;
+}
+
+.gallery .swiper-slide.swiper-slide-active div p{
+	left: 120px;
+	top: 332px;
+	font-size: 15px;
+}
+
+/*베스트상품 호버 꾸미기*/
+.swiper-slide div{
+	background-color: #ffffffd8;
+	border-radius: 200px 200px 0 0;
+	width: 228px;
+	height: 346px;
+	z-index: 90;
+	position: absolute;
+	left: 86px;
+	top: 95px;
+}
+
+.swiper-slide div a .heart{
+	width: 85px;
+	height: 41px;
+	position: absolute;
+	left: 80px;
+	top: 110px;
+	opacity: 0.6;
+}
+.swiper-slide div a .heart:hover{
+	opacity: 1;
+}
+.swiper-slide div a .b_shopoing{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	position: absolute;
+	bottom: -30px;
+	left: 80px;
+	opacity: 0.6;
+}
+.swiper-slide div a .b_shopoing:hover{
+	opacity: 1;
+}
+.swiper-slide div a .buy{
+	width: 40px;
+	height: 30px;
+	display: inline-block;
+	position: absolute;
+	bottom: -30px;
+	left: 120px;
+	opacity: 0.6;
+}
+.swiper-slide div a .buy:hover{
+	opacity: 1;
+}
+
+.swiper-slide div h3{
+	font-size: 15px;
+	color: rgb(37, 37, 37);
+	text-align: center;
+	font-weight: 500;
+	position: absolute;
+	left: 33px;
+	top: 240px;
+	
+}
+.swiper-slide div p{
+	font-size: 14px;
+	color: rgb(52, 52, 52);
+	text-align: center;
+	margin-bottom: 20px;
+	position: absolute;
+	left: 93px;
+	top: 270px;
+	z-index: 100;
+	
+	
+}
+.swiper-slide div{
+opacity: 0;
+transition: opacity 0.6s;
+}
+.swiper-slide div:hover{
+	opacity: 1;
+}
+
+
+/*이동버튼 영역*/
+.gallery .swiper-button-next:after,
+.gallery .swiper-button-prev:after{display:none;}/* 소스에 들어있는 버튼 삭제 */
+.gallery .swiper-button-next,
+.gallery .swiper-button-prev{width:71px; height:71px;}/* 버튼 크기 */
+.gallery .swiper-button-prev{left:15px; background:url(../images/best_arrow.png);}/* 버튼 위치, 버튼 이미지 */
+.gallery .swiper-button-next{right:15px; background:url(../images/best_arrow.png);}/* 버튼 위치, 버튼 이미지 */
+.gallery .swiper-button-prev:hover{-webkit-animation: rotate-center 0.6s ease-in-out both;
+	animation: rotate-center 1s ease-in-out infinite;}/* 버튼 호버 이미지 */
+.gallery .swiper-button-next:hover{-webkit-animation: rotate-center 0.6s ease-in-out both;
+	animation: rotate-center 1s ease-in-out infinite;}/* 버튼 호버 이미지 */
+
+/*블릿버튼 영역*/
+.gallery .swiper-pagination-bullet{background:rgb(175, 127, 212); width:10px; height:10px; opacity:0.5;}/* 블릿버튼 크기, 색상, 투명도 */
+.gallery .swiper-pagination-bullet-active{opacity:1;} /* 블릿버튼 페이지 표시날 때 투명도 */
+.gallery .swiper-container-horizontal > .swiper-pagination-bullets{bottom: 10px;}/* 블릿버튼 위치 */
+
+
+/**
+ * ----------------------------------------
+ * animation rotate-center
+ * ----------------------------------------
+ */
+ @-webkit-keyframes rotate-center {
+	0% {
+	  -webkit-transform: rotate(0);
+			  transform: rotate(0);
+	}
+	100% {
+	  -webkit-transform: rotate(360deg);
+			  transform: rotate(360deg);
+	}
+  }
+  @keyframes rotate-center {
+	0% {
+	  -webkit-transform: rotate(0);
+			  transform: rotate(0);
+	}
+	100% {
+	  -webkit-transform: rotate(360deg);
+			  transform: rotate(360deg);
+	}
+  }
+  

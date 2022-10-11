@@ -1,0 +1,16 @@
+$(function(){
+    $('.moon').click(function(){
+        $('.popup').fadeIn();//show()
+    });
+    $('.close').click(function(){
+        $('.popup').fadeOut();//hide()
+    });
+});
+$(function(){
+    $('.moong').click(function(){
+        $('.popup2').fadeIn();//show()
+    });
+    $('.close').click(function(){
+        $('.popup2').fadeOut();//hide()
+    });
+});

@@ -1,0 +1,466 @@
+@font-face {
+    font-family: 'NanumSquareRound';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_two@1.0/NanumSquareRound.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}/*나눔스퀘어라운드 폰트*/
+@font-face {
+    font-family: 'SUIT-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_suit@1.0/SUIT-Regular.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}/*수트 폰트*/
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    color: #bc92c2;
+    font-family: 'NanumSquareRound';
+}
+
+ul {
+    list-style: none;
+}
+
+body {
+    font-family: 'SUIT';
+    font-size: 17px;
+    line-height: 24px;
+    color: #000;
+    min-width: 1320px;
+    background-color: #fef9ff;
+}
+
+/*스크롤바*/
+body::-webkit-scrollbar {/*스크롤바 전체*/
+    width: 12px;
+  }
+  body::-webkit-scrollbar-thumb {/*스크롤바 막대*/
+    background-color: #b564b674;
+    border-radius: 10px;
+    background-clip: padding-box;
+    border: 2px solid transparent;
+  }
+  body::-webkit-scrollbar-track {/*스크롤바 막대 외부*/
+    background-color: rgb(185, 167, 198);
+    border-radius: 10px;
+    box-shadow: inset 0px 0px 5px white;
+  }
+
+  /*마우스 커서*/
+  html { cursor: none; }
+#drawing_line { position: relative; z-index: 2100; height: 0; }
+#drawing_line > svg { position: fixed; left: 0; top: 0; width: 100%; height: 100%; z-index: 2100; pointer-events: none; }
+#drawing_line > svg .drawing_line_polyline { fill: none; stroke: #9239b356; stroke-width: 2; }
+#drawing_line > svg .drawing_line_circle { fill: #9239b39c; }
+
+
+/*헤더*/
+#header {
+    background-color: #fef9ff;
+    height: 107px;
+    position: fixed;/*서브메뉴의 기준*/
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2000;
+}
+
+/*헤더 가운데창*/
+.header_inner {
+    width: 1320px;
+    height: 107px;
+    margin: auto;
+    /*position: relative;
+    로고 가운데 기준 (서브메뉴넣어야해서 뺌)*/
+}
+.nav{
+  float: right;
+}
+.nav li{
+  float: left;
+}
+
+/*네비*/
+
+.header_inner .nav li:nth-child(2){
+  margin-right: 781px;
+} /*구독네비 오른쪽에 margin 넣음*/
+
+.nav> li> a{
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  padding: 48px 25px 50px;
+}
+
+.nav>li>a:hover{
+  color: rgb(159, 90, 161);
+}
+
+/* 서브메뉴 꾸미기 */
+.sub{
+  position: absolute;/*헤더가 기준*/
+  width: 100%;
+  left: 0;
+  top: 107px;
+  z-index: 10;
+/* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fef9ff+0,ffffff+100&1+35,0.45+80,0+100 */
+background: -moz-linear-gradient(top,  rgba(254,249,255,1) 0%, rgba(254,251,255,1) 35%, rgba(255,254,255,0.45) 80%, rgba(255,255,255,0) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(254,249,255,1) 0%,rgba(254,251,255,1) 35%,rgba(255,254,255,0.45) 80%,rgba(255,255,255,0) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(254,249,255,1) 0%,rgba(254,251,255,1) 35%,rgba(255,254,255,0.45) 80%,rgba(255,255,255,0) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fef9ff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+display: none;/*서브메뉴 안보이게 만들기*/
+}
+.sub div{
+  width: 1320px;
+  height: 200px;
+  margin: 0 auto;
+  padding: 20px 0;
+  position: relative; /*서브메뉴 형광펜효과 기준*/
+}
+
+/*서브메뉴 텍스트 배치*/
+.sub_b1{
+  margin-left: 23px;
+  margin-top: -10px;
+}
+.sub_b2{
+  margin-left: -116px;
+  margin-top: 34px;
+}
+.sub_b3{
+  margin-left: -905px;
+  margin-top: 83px;
+}
+.sub_c1{
+  margin-left: 1090px;
+  margin-top: -10px;
+}
+.sub_c2{
+  margin-left: 1090px;
+  margin-top: 16px;
+}
+.sub_c3{
+  margin-left: 1090px;
+  margin-top: 23px;
+}
+
+/*서브메뉴 형광펜 효과*/
+.sub1 span{
+  display: inline-block;
+  width: 130px;
+  height: 25px;
+  background-color: rgba(234, 200, 255, 0.493);
+  position: absolute;
+  left: 20px;
+  z-index: -1;/*글자 뒤로 이동*/
+  transform: scaleX(0);/*배경 길이 없애기*/
+  transform-origin: left;/*배경 길이의 기준점을 왼쪽으로 두기*/
+  transition: all 1s;
+}
+.sub1 li:hover span{
+  transform: scaleX(1);/*배경 길이 나타나게 만들기*/
+}
+
+.sub2 span{
+  display: inline-block;
+  width: 120px;
+  height: 25px;
+  background-color: rgba(234, 200, 255, 0.493);
+  position: absolute;
+  left: 1085px;
+  z-index: -1;/*글자 뒤로 이동*/
+  transform: scaleX(0);/*배경 길이 없애기*/
+  transform-origin: left;/*배경 길이의 기준점을 왼쪽으로 두기*/
+  transition: all 1s;
+}
+.sub2 li:hover span{
+  transform: scaleX(1);/*배경 길이 나타나게 만들기*/
+}
+/* 서브메뉴 보이게 만들기 - 제이쿼리에서 해주기
+.nav li:hover .sub{
+  display: block;
+}*/
+
+
+
+/*로고*/
+.logo {
+    position: absolute;
+    /*로고 가운데*/
+    left: 50%;
+    top: 50%;
+    margin-left: -29.5px;
+    /*사진 너비 크기의 반만큼 마이너스*/
+    margin-top: -38.5px;
+    /*사진 높이 크기의 반만큼 마이너스*/
+    z-index: 3;
+}
+
+
+
+/*로고 호버*/
+.header_inner a:hover img {
+    animation: logo 0.6s linear infinite;
+}
+
+/*로고 애니메이션*/
+@keyframes logo {
+    0% {
+        transform: rotateY(0);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
+}
+
+/*마이페이지&장바구니*/
+.right{
+  position: relative;
+  top: 0;
+  left: 0;
+}
+.right_icon{
+    position: absolute;
+    top: 35px;
+    right: -212px;
+    margin: auto;
+    z-index: 100;
+}
+.right_icon a{
+    padding-left: 10px;
+}
+.my{
+  width: 23px;
+  height: 26px;
+}
+.shopping{
+  width: 28px;
+  height: 25px;
+}
+
+/* 탑버튼 */
+.top_button {
+    position: fixed;
+    right: 50px;
+    bottom: 50px;
+    z-index: 99;
+}
+
+/* 반응형 메뉴 */
+@media (max-width:1650px){
+  .header_inner{
+    width: 100%;
+  }
+  .nav{
+    float: left;
+    width: 90%;
+  }
+  .right{
+    width: 10%;
+    float: right;
+  }
+  .right_icon{
+    position: static;
+    margin-top: 35px;
+  }
+  .nav> li{
+    width: 15%;
+    text-align: center;
+  }
+  .nav> li> a{
+    padding: 48px 0px 50px;
+  }
+  .header_inner .nav li:nth-child(2) {
+    margin-right: 40%;
+  }
+}
+
+.event{
+    width: 1320px;
+    height: 2500px;
+    margin: 30px auto;
+    position: relative;
+    background: url(.././../images/community/Detailed_page.jpg) no-repeat center;
+}
+.event a{
+    position: absolute;
+}
+.event .cash{
+    top: 1560px;
+    left: 528px;
+}
+.event .join{
+    top: 1560px;
+    left: 686px;
+
+}
+.event_text{
+    width: 1320px;
+    font-family: 'NanumSquareRound';
+    font-size: 40px;
+    color: #a673ad;
+    margin: 200px auto 0;
+    text-align: center;
+}
+.event_List{
+    width: 1320px;
+    margin: 50px auto;
+    text-align: center;
+    
+    
+}
+.event_List a{
+    background-color: #a673ad;
+    color: #fff;
+    padding: 20px;
+    font-size: 18px;
+    border-radius: 50px;
+    transition: all 0.7s;
+}
+.event_List a:hover{
+    background-color: #eb87b6;
+}
+
+
+
+/*푸터*/
+.footer{
+  /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#fef9ff+0,a46da7+100&0+0,1+100 */
+background: -moz-linear-gradient(top,  rgba(254,249,255,0) 0%, rgba(164,109,167,1) 100%); /* FF3.6-15 */
+background: -webkit-linear-gradient(top,  rgba(254,249,255,0) 0%,rgba(164,109,167,1) 100%); /* Chrome10-25,Safari5.1-6 */
+background: linear-gradient(to bottom,  rgba(254,249,255,0) 0%,rgba(164,109,167,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00fef9ff', endColorstr='#a46da7',GradientType=0 ); /* IE6-9 */
+min-width: 1320px;
+}
+.footer_inner{
+  width: 1320px;
+  height: 378px;
+  margin: auto;
+  text-align: center;
+  padding-top: 148px;
+  color: #fff;
+  
+}
+
+.f_logo{
+  display: block;
+}
+
+.notice a{
+  font-size: 14px;
+  color: #fff;
+  margin-right: 30px;
+  position: relative;/*밑줄 기준*/
+  padding-bottom: 10px;
+}
+
+.notice a span{
+  display: inline-block; 
+  width: 100%; /*밑줄 길이*/
+  height: 2px; /*밑줄 두께*/
+  background-color: rgb(255, 255, 255);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  transform: scaleX(0);/*밑줄 길이 없애기*/
+  transform-origin: left;/*밑줄 길이의 기준점을 왼쪽으로 두기*/
+  transition: all 1s;
+}
+.notice a:hover span{
+  transform: scaleX(1);/*밑줄 길이 나타나게 만들기*/
+}
+
+.notice{
+  margin: 10px 0 20px 50px;
+}
+.footer_inner p{
+  line-height: 24px;
+  font-size: 13px;
+}
+
+.footer_inner ul li a{
+  margin-left: 50px;
+  color: #fff;
+  font-size: 15px;
+  font-family: 'SUIT';
+  font-weight: 200;
+}
+.footer_margin{
+  margin-top: 4px;
+  margin-bottom: 10px;
+}
+
+.insatgram{
+  opacity: 0.6;
+  margin-right: 10px;
+}
+.insatgram:hover{
+  opacity: 1;
+}
+.facebook{
+  opacity: 0.6;
+}
+.facebook:hover{
+  opacity: 1;
+}
+
+ /*고객센터 버튼 꾸미기*/
+ .customer_service{
+  color: #fff;
+  font-size: 14px;
+  font-family: 'SUIT';
+  font-weight: 300;
+  border: #fff 2px solid;
+  border-radius: 50px;
+  padding: 7px 15px;
+  display: inline-block;
+  position: relative;/*버블의 기준*/
+  overflow: hidden;/*버튼 밖에 요소 안보이게 만들어줌*/
+  transition: color 0.7s;/*글자색 서서히 변화되게 만들기*/
+}
+
+/*고객센터 버블만들기*/
+.customer_service span{
+  display: inline-block;
+  width: 25%;/*100% 나누기 버블 갯수 만큼*/
+  height: 100%;
+  background-color: rgb(247, 104, 202);
+  position: absolute;
+  top: 110%;
+  left: 0;
+  border-radius: 50%;/*원형으로 만들기*/
+  transition: all 0.7s;/*서서히 변하게 만들기*/
+  z-index: -1;/*글자 뒤로 버블 보내기*/
+}
+.customer_servicea span:nth-child(1){
+  left: 0;
+  transition-delay: 0s;/*트랜지션 딜레이*/
+}
+.customer_service span:nth-child(2){
+  left: 30%;
+  transition-delay: 0.1s;
+}
+.customer_service span:nth-child(3){
+  left: 60%;
+  transition-delay: 0.2s;
+}
+.customer_service span:nth-child(4){
+  left: 90%;
+  transition-delay: 0.3s;
+}
+
+/*호버효과*/
+.customer_service:hover{
+  color: #fff;/*글자색 바꾸기*/
+}
+.customer_service:hover span{
+  transform: scale(1.6, 1.6);
+  top: 0;
+}

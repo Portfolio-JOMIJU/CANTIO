@@ -1,0 +1,60 @@
+*{margin: 0; padding: 0;}
+a{text-decoration: none; color: #000;}
+
+/*달이 팝업 꾸미기*/
+.popup{/*화면전체 배경*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;/*팝업 안보이게*/
+}
+.popup div{/*가운데 창*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.popup img{
+    display: block;
+}
+.popup .close{
+    position: absolute;
+    top: 50px;
+    left: 542px;
+    opacity: 0.7;
+}
+.popup .close:hover{
+    opacity: 1;
+}
+
+/*뭉이 팝업 꾸미기*/
+.popup2{/*화면전체 배경*/
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 50px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: none;/*팝업 안보이게*/
+}
+.popup2 div{/*가운데 창*/
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.popup2 img{/*팝업 이미지*/
+    display: block;
+}
+.popup2 .close{/*취소 버튼*/
+    position: absolute;
+    top: 50px;
+    left: 542px;
+    opacity: 0.7;
+}
+.popup2 .close:hover{/*취소버튼 호버*/
+    opacity: 1;
+}
