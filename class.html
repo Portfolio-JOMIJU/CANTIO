@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1400"><!--다른 매체에서도 너비 오류 없이 볼 수 있게-->
+  
+  <!--파비콘-->
+  <link href="./images/favorites_icon.png" rel="icon" type="image/png" sizes="32x32" >
+
+  <!-- 탑버튼 css -->
+  <link rel="stylesheet" href="./css/icon.css">
+
+  <!-- 슬라이드 css -->
+	<link href="css/community/swiper.css" rel="stylesheet" type="text/css"><!-- 수정X -->
+	<link href="css/community/slidebanner.css" rel="stylesheet" type="text/css"><!--디자인에 맞게 수정-->
+
+  <!-- 인덱스 스타일 css 연결 -->
+  <link rel="stylesheet" href="./css/community/Community_class_style.css">
+  <title>CLASS</title>
+</head>
+<body>
+  <!-- 마우스 커서 -->
+  <div id="drawing_line">
+    <svg class="drawing_line_svg">
+      <circle class="drawing_line_circle" cx="0" cy="0" r="8"></circle>
+      <polyline class="drawing_line_polyline" points=""></polyline>
+    </svg>
+  </div>
+
+  <div id="header"><!-- 헤더 서브메뉴의 기준-->
+    <div class="header_inner"><!-- 헤더 가운데창 -->
+      <ul class="nav">
+        <li><a href="./Brand_Story.html">BRAND</a>
+          <div class="sub sub1"><!-- 배경 -->
+            <div><!-- 가운데창 -->
+              <ul >
+                <li class="sub_b1"><a href="./Brand_Story.html">BRAND STORY<span></span></a></li>
+                <li class="sub_b2"><a href="./Brand_Design.html">BRAND DESIGN<span></span></a></li>
+                <li class="sub_b3"><a href="./store.html">STORE<span></span></a></li>
+              </ul>
+            </div><!-- 가운데창 -->
+          </div><!-- 배경 -->
+        </li>
+        <li><a href="./subscription.html">SUBSCRIPTION</a></li>
+        <li><a href="./Community_event.html">COMMUNITY</a>
+          <div class="sub sub2"><!-- 배경 -->
+            <div><!-- 가운데창 -->
+              <ul>
+                <li class="sub_c1"><a href="./Community_event.html">EVENT / Q&A<span></span></a></li>
+                <li class="sub_c2"><a href="./class.html">CLASS<span></span></a></li>
+                <li class="sub_c3"><a href="./Community_Membership.html">MEMBERSHIP<span></span></a></li>
+              </ul>
+            </div><!-- 가운데창 -->
+          </div><!-- 배경 -->
+        </li>
+        <li><a href="./shop.html">SHOP</a></li>
+      </ul>
+      <a href="./index.html" class="logo"> <!-- 로고 -->
+        <img src="./images/logo.png" alt="로고 앞면">
+        
+      </a>
+    <div class="right"><!-- 위치 기준 -->
+      <div class="right_icon"> <!-- 마이페이지&장바구니 -->
+        <a href="#" class="my"><img src="./images/My_Page_icon.png" alt="마이페이지 아이콘"></a>
+        <a href="#" class="shopping"><img src="./images/shopping_basket_icon.png" alt="장바구니 아이콘"></a>
+      </div><!-- 마이페이지&장바구니 -->
+    </div><!-- 위치 기준 -->
+  </div><!-- 헤더 가운데창 -->
+  <div class="scroll-content"></div>
+  </div><!-- 헤더 서브메뉴의 기준-->
+
+   <!--탑 버튼-->
+   <a href="#" class="top"><img src="./images/top.png" alt="top버튼"></a>
+
+   <!-- 배너 -->
+   <div id="shop_banner">
+    <img src="./images/shop/logo_mark.png" alt="로고마크">
+    <h1>CANTIO CLASS</h1>
+    <p>꽃과 가까워지려는 당신을 응원합니다.</p>
+   </div>
+
+   <!-- 클래스 신청 -->
+  <div class="reservation"><!-- 신청 전체창 -->
+    
+    <div><!-- 클래스 이미지 -->
+      <img src="./images/community/form_img.png" class="reservation_img" alt="">
+    </div><!-- 클래스 이미지 -->
+    
+    <form><!-- 예약 폼 -->
+      
+      <h1>[칸티오] 플라워 스킬업 클래스</h1>
+      <h4>39,900원 ~ 198,800원</h4>
+      <a href="#none" class="class_button">클래스 타입별 상세정보 보러가기 →
+      </a>
+      <hr>
+      <div class="input"><!-- 인풋 -->
+        <!-- 기간 -->
+        <label class="box-radio-input"><input type="radio" name="cp_item" value="ONE DAY [하루]" checked="checked"><span>ONE DAY [하루]</span></label>
+        <label class="box-radio-input"><input type="radio" name="cp_item" value="ONE MONTH [한달]"><span>ONE MONTH [한달]</span></label><br>
+        
+        <!-- 스토어 선택-->
+        <div class="location_box">
+        <img src="./images/community/Location.png" class="Location" alt="위치 아이콘">
+        <select name="store" id="j_store">
+        <option value="j_store">서울 잠실점</option>
+        <option value="j_store">서울 서초점</option>
+        <option value="j_store">부산 서면점</option>
+        </select>
+        </div>
+        
+        <!-- 날짜 -->
+        <div class="Calendara_box">
+        <img src="./images/community/Calendar_icon.png" class="Calendar" alt="달력 아이콘">
+        <input type="date" name="day" id="day"><br>
+        </div>
+        
+        <!-- 시간 -->
+        <div class="Clock_box">
+          <img src="./images/community/Clock.png" class="Clock" alt="시계 아이콘">
+        <select name="time" id="time">
+        <option value="time">11:00</option>
+        <option value="time">15:00 </option>
+        <option value="time">17:00</option>
+        </select>
+        </div>
+        
+        <!-- 신청버튼 -->
+        <input type="button" id="application" onclick="alert('♥클래스 신청이 완료되었습니다♥')" value="신청하기">
+      </div><!-- 인풋 -->
+  </form><!-- 예약 폼 -->
+  </div><!-- 신청 전체창 -->
+
+  <div class="class_content1"><!-- 클래스 콘텐츠(이런걸 배울거에요) -->
+    <h1>Class Content</h1>
+    <h3>모든 클래스타입은 기본적으로 이런걸 배울거에요</h3>
+    <div class="f_d">
+    <img src="./images/community/Flower_Design.png" alt="플라워디자인기초">
+    <img src="./images/community/Flower_Design2.png" alt="디자인구상">
+    <img src="./images/community/Flower_Design3.png" alt="사입 팁">
+    </div>
+  </div><!-- 클래스 콘텐츠(이런걸 배울거에요) -->
+   
+   <div class="class_content2"><!-- 클래스 콘텐츠(다양한 꽃만들기) -->
+    <h1>make flowers</h1>
+    <h3>클래스에서 배우는 다양한 꽃만들기</h3>
+    <p>mouse over it</p>
+
+     <!-- 슬라이드 구문 -->
+	  <div class="swiper-container slide">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <a href="#"><img src="./images/community/make1.png" onmouseover="this.src='./images/community/make_hover1.png';" onmouseout="this.src='./images/community/make1.png';" alt="1"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="./images/community/make2.png" onmouseover="this.src='./images/community/make_hover2.png';" onmouseout="this.src='./images/community/make2.png';" alt="1"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="./images/community/make3.png" onmouseover="this.src='./images/community/make_hover3.png';" onmouseout="this.src='./images/community/make3.png';" alt="1"></a>
+        </div>
+        <div class="swiper-slide">
+          <a href="#"><img src="./images/community/make4.png" onmouseover="this.src='./images/community/make_hover4.png';" onmouseout="this.src='./images/community/make4.png';" alt="1"></a>
+        </div>
+      </div>
+      <!-- 화살표 버튼 -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- 블릿 버튼 -->
+      <div class="swiper-pagination"></div>
+      </div>
+   </div><!-- 클래스 콘텐츠(다양한 꽃만들기) -->
+
+   <div class="make_bottom"><!-- 클래스 하단 배너 -->
+    <h1>어제와는 다른 오늘을 창조해가는 당신,</h1>
+    <a href="#none">클래스  운영중인 스토어 위치 보러가기</a>
+   </div>
+   
+   
+   
+   <!-- 푸터 -->
+  <div class="footer"><!-- 푸터 전체창 -->
+    <div class="footer_inner"><!-- 푸터 중간창 -->
+      <a href="./index.html" class="f_logo"><img src="./images/footer_logo.png" alt="푸터 로고"></a>
+      
+      <p class="notice">
+        <a href="#">공지사항<span></span></a>
+        <a href="#">배송정책<span></span></a>
+        <a href="./Community_Membership.html">회원 멤버쉽<span></span></a>
+      </p>
+      <a href="#" class="customer_service">고객센터
+        <span></span><!--버블-->
+        <span></span><!--버블-->
+        <span></span><!--버블-->
+        <span></span><!--버블-->
+      </a>
+      <p class="footer_margin">고객센터 1660-2686 <br>
+        am 10:00 - pm 18:00 점심시간 13:00 - 14:00(주말&공휴일 휴무)</p>
+        <a href="https://www.instagram.com/" target="_blank" class="insatgram"><img src="./images/f_insatgram.png" alt="푸터 인스타그램아이콘"></a>
+        <a href="https://www.facebook.com/" target="_blank" class="facebook"><img src="./images/f_facebook.png" alt="푸터 페이스북아이콘"></a>
+        <p>칸티오(cantio) ｜ 대표자 조미주 ｜ 사업자 등록번호 268-68-562 ｜ 사업자정보 확인 ｜ 서울특별시 송파구 잠실동 40-1 CNATIO</p>
+        <P>© 2020 cantio. ALL RIGHTS RESERVED</P>
+      
+    </div><!-- 푸터 중간창 -->
+  </div><!-- 푸터 전체창 -->
+
+
+  <!-- 탑버튼 js -->
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script><!-- 제이쿼리 라이브러리,수정X -->
+	<script src="./script/icon.js"></script>
+
+  <!-- 커서 js -->
+  <script src="./script/cursor.js"></script>
+
+  <!--서브메뉴 js-->
+  <script src="./script/menu.js"></script><!--내가 만든 소스-->
+  
+  <!-- 슬라이드 js -->
+  <script src="script/community/swiper.min.js"></script><!-- 수정X -->
+	<script src="script/community/slidebanner.js"></script><!--디자인에 맞게 수정-->
+
+  <!-- aos js -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!-- aos 라이브러리 -->
+  <script src="./script/aos.js"></script><!-- aos 소스 -->
+</body>
+</html>

@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1400">
+  <!--다른 매체에서도 너비 오류 없이 볼 수 있게-->
+  
+   <!--파비콘-->
+  <link href="./images/favorites_icon.png" rel="icon" type="image/png" sizes="32x32">
+  
+  <!--페이드 배너 css-->
+  <link rel="stylesheet" href="./css/fade_banner.css">
+
+  <!-- 베스트 상품 슬라이드 css -->
+	<link href="./css/swiper.css" rel="stylesheet" type="text/css"><!-- 수정X -->
+	<link href="./css/gallery.css" rel="stylesheet" type="text/css"><!--디자인에 맞게 수정-->
+
+  <!-- 흘러가는 인스타그램 슬라이드 css -->
+  <link rel="stylesheet" href="./css/jquery.simplyscroll.css">
+
+  <!-- aos css -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  
+  <!-- 탑버튼 css -->
+  <link rel="stylesheet" href="./css/icon.css">
+  
+  <!-- 인덱스 스타일 css 연결 -->
+  <link rel="stylesheet" href="./css/index_style.css">
+  <title>CANTIO</title>
+</head>
+<body>
+   
+  <!-- 마우스 커서 -->
+   <div id="drawing_line">
+    <svg class="drawing_line_svg">
+      <circle class="drawing_line_circle" cx="0" cy="0" r="8"></circle>
+      <polyline class="drawing_line_polyline" points=""></polyline>
+    </svg>
+  </div>
+
+
+  <div id="header"><!-- 헤더 서브메뉴의 기준-->
+    <div class="header_inner"><!-- 헤더 가운데창 -->
+      <ul class="nav">
+        <li><a href="./Brand_Story.html">BRAND</a>
+          <div class="sub sub1"><!-- 배경 -->
+            <div><!-- 가운데창 -->
+              <ul >
+                <li class="sub_b1"><a href="./Brand_Story.html">BRAND STORY<span></span></a></li>
+                <li class="sub_b2"><a href="./Brand_Design.html">BRAND DESIGN<span></span></a></li>
+                <li class="sub_b3"><a href="./store.html">STORE<span></span></a></li>
+              </ul>
+            </div><!-- 가운데창 -->
+          </div><!-- 배경 -->
+        </li>
+        <li><a href="./subscription.html">SUBSCRIPTION</a></li>
+        <li><a href="./Community_event.html">COMMUNITY</a>
+          <div class="sub sub2"><!-- 배경 -->
+            <div><!-- 가운데창 -->
+              <ul>
+                <li class="sub_c1"><a href="./Community_event.html">EVENT / Q&A<span></span></a></li>
+                <li class="sub_c2"><a href="./class.html">CLASS<span></span></a></li>
+                <li class="sub_c3"><a href="./Community_Membership.html">MEMBERSHIP<span></span></a></li>
+              </ul>
+            </div><!-- 가운데창 -->
+          </div><!-- 배경 -->
+        </li>
+        <li><a href="./shop.html">SHOP</a></li>
+      </ul>
+      <a href="#" class="logo"> <!-- 로고 -->
+        <img src="./images/logo.png" alt="로고 앞면">
+      </a>
+    <div class="right"><!-- 위치 기준 -->
+      <div class="right_icon"> <!-- 마이페이지&장바구니 -->
+        <a href="#" class="my"><img src="./images/My_Page_icon.png" alt="마이페이지 아이콘"></a>
+        <a href="#" class="shopping"><img src="./images/shopping_basket_icon.png" alt="장바구니 아이콘"></a>
+      </div><!-- 마이페이지&장바구니 -->
+    </div><!-- 위치 기준 -->
+  </div><!-- 헤더 가운데창 -->
+  </div><!-- 헤더 서브메뉴의 기준-->
+  
+  
+  
+  <!--페이드 배너-->
+  
+  <div class="slideshow-container">
+
+    <div class="mySlideDiv fade active">
+       <a href="#"><img src="./images/banner_1.png"></a>
+    </div>
+           
+    <div class="mySlideDiv fade">
+      <a href="#"><img src="./images/banner_2.png"></a>
+    </div>
+           
+    <div class="mySlideDiv fade">
+      <a href="#"><img src="./images/banner_3.png"></a>
+    </div>
+
+    <a class="prev" onclick="prevSlide()"><img src="./images/Left_arrow.png" alt=""></a>
+    <a class="next" onclick="nextSlide()"><img src="./images/Right_arrow.png" alt=""></a>
+           
+</div>
+    
+    <!--탑 버튼-->
+  <a href="#" class="top"><img src="./images/top.png" alt="top버튼"></a>
+
+    <!-- Best for you 인기상품 -->
+    <div class="best"> <!-- 인기상품 박스 -->
+      <div class="best_inner"><!-- 인기상품 박스 가운데 -->
+        
+        <h1>BEST FOR YOU</h1>
+        <a href="./shop.html" class="view">VIEW ALL</a>
+      </div><!-- 인기상품 박스 가운데 -->
+    </div><!-- 인기상품 박스 -->
+	
+   <!-- Best for you 상품 슬라이드 구문 -->
+   <div class="swiper-container gallery">
+    <div class="gallery_inner">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div>
+            <a href="#"><img src="./images/heart.png" class="heart" alt="하트"></a>
+            <h3>편안함을 주는 페튜니아_6대</h3>
+            <p>15,000원</p>
+            <a href="#"><img src="./images/best_shopping.png"  class="b_shopoing" alt="장바구니 버튼"></a>
+            <a href="#"><img src="./images/buy.png" class="buy" alt="buy버튼"></a>
+          </div>
+          <a href="#"><img src="./images/best_1.png" class="b_img" alt="페튜니아"></a>
+        </div>
+        <div class="swiper-slide">
+          <div>
+            <a href="#"><img src="./images/heart.png" class="heart" alt="하트"></a>
+            <h3>영원한 사랑을 담은 튤립_6대</h3>
+            <p>18,900원</p>
+            <a href="#"><img src="./images/best_shopping.png"  class="b_shopoing" alt="장바구니 버튼"></a>
+            <a href="#"><img src="./images/buy.png" class="buy" alt="buy버튼"></a>
+          </div>
+          <a href="#"><img src="./images/best_2.png" class="b_img" alt="튤립"></a>
+          
+        </div>
+        <div class="swiper-slide">
+          <div>
+            <a href="#"><img src="./images/heart.png" class="heart" alt="하트"></a>
+            <h3>자신을 사랑하는 수선화_5대</h3>
+            <p>16,500원</p>
+            <a href="#"><img src="./images/best_shopping.png"  class="b_shopoing" alt="장바구니 버튼"></a>
+            <a href="#"><img src="./images/buy.png" class="buy" alt="buy버튼"></a>
+          </div>
+          <a href="#"><img src="./images/best_3.png" class="b_img" alt="수선화"></a>
+        </div>
+        
+      </div>
+      <!-- 화살표 버튼 -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- 블릿 버튼 -->
+      <div class="swiper-pagination"></div>
+      </div>
+  </div>
+
+    <!-- 구독 -->
+    <div class="petals"><!-- 꽃잎배경 -->
+    <div class="subscription"> <!-- 구독 전체 박스 -->
+      
+      <img src="./images/subscription.png" alt="구독 꽃사진">
+      
+      <div class="sub_text"><!-- 구독 텍스트있는 박스 -->
+        <h1>SUBSCRIPTION</h1>
+        <h3>칸티오 꽃구독, 취향따라 즐겨요</h3>
+        <img src="./images/now_arrow.png" alt="now 가르키는 화살표 아이콘">
+        <a href="./subscription.html">
+          <h2>NOW</h2>
+        </a>
+      </div><!-- 구독 텍스트있는 박스 -->
+      <div class="petal1"><!-- 꽃잎 -->
+        <img src="./images/Petal.png" alt="petal1">
+      </div>
+      <div class="petal2">
+        <img src="./images/Petal.png" alt="petal1">
+      </div>
+    
+    </div><!-- 구독 전체 박스 -->
+  </div><!-- 꽃잎배경 -->
+
+    <!-- 클래스 -->
+    <div class="class">
+      <!-- 클래스 전체박스 -->
+      <div class="class_inner">
+        <!-- 클래스 중간창 -->
+        <div class="line"></div>
+        <ul class="line1">
+          <li>2022</li>
+          <li>내 손에서 재탄생 되는 꽃 작품 만들기</li>
+        </ul>
+        <div class="class_title">
+          <!-- 클래스 타이틀 -->
+          <img src="./images/class_title.png" alt="클래스 타이틀 이미지">
+        </div><!-- 클래스 타이틀 -->
+    
+        <div class="class_con">
+          <!-- 클래스 콘텐츠 -->
+          <div class="aos"><!-- aos용 div -->
+            <img src="./images/class_1day.png" data-aos="fade-right" data-aos-easing="ease-out-back" class="oneday" alt="클래스 원데이 텍스트 이미지">
+           <img src="./images/class_1month.png" data-aos="fade-left" data-aos-easing="ease-out-back" class="onemonth" alt="클래스 원먼스 텍스트 이미지">
+        </div><!-- aos용 div -->
+          <img src="./images/class_left_arrow.png" class="left_arrow" alt="왼쪽 화살표">
+          <a href="#" class="class_img"><img src="./images/class_img.png" alt="클래스 사진"></a>
+          <img src="./images/class_right_arrow.png" class="right_arrow" alt="오른쪽 화살표">
+          <a href="#" class="class_img_hover"><img src="./images/class_hover.png" alt="클래스 호버 사진"></a>
+          <div class="class_a"><a href="./class.html">바로가기</a></div>
+        </div><!-- 클래스 콘텐츠 -->
+        <ul class="line2">
+          <li>handmade</li>
+          <li>Bouquet ｜ Basket</li>
+        </ul>
+        <div class="class_rowline"></div>
+      </div><!-- 클래스 중간창 -->
+    </div><!-- 클래스 전체박스 -->
+    
+    <!-- 슬로건 -->
+    <div class="slogan"><!-- 슬로건 -->
+      <div class="slogan_inner"><!-- 슬로건 가운데창 -->
+        <img src="./images/slogan_logo.png" alt="슬로건 로고">
+        <img src="./images/slogan_bandstory.png" alt="브랜드 스토리">
+        <a href="./Brand_Story.html"><img src="./images/s_bandstory_button.png" alt="브랜드 스토리 버튼"></a>
+        <img src="./images/slogan_box.png"  alt="슬로건 네모">
+        <img src="./images/slogan.png" alt="슬로건 이미지">
+         <div class="rotate">
+            <img src="./images/moon.png" class=".moon" alt="달 이미지">
+           <img src="./images/slogan_rotation.png" class="rotation" alt="슬로건 텍스트 회전">
+        </div>
+      </div><!-- 슬로건 가운데창 -->
+    </div><!-- 슬로건 -->
+
+    <!-- 꽃 운세 -->
+    <div class="tarot"><!-- 타로 전체박스 -->
+      <div class="tarot_inner"><!-- 타로 가운데창 -->
+        <img src="./images/tarot_title.png" class="title" alt="꽃운세 타이틀 이미지">
+        <div class="tarot_top">
+         <a href="#none" class="tarot1"><img src="./images/tarot_purple.png" alt="타로카드보라색"></a>
+          <a href="#none" class="tarot2"><img src="./images/tarot_pink.png" alt="타로카드핑크색"></a>
+         <a href="#none" class="tarot3"><img src="./images/tarot_purple.png" alt="타로카드보라색"></a>
+          <a href="#none" class="tarot4"><img src="./images/tarot_pink.png" alt="타로카드핑크색"></a>
+        </div>
+        <div class="tarot_bottom">
+        <a href="#none" class="tarot5"><img src="./images/tarot_pink.png" alt="타로카드핑크색"></a>
+        <a href="#none" class="tarot6"><img src="./images/tarot_purple.png" alt="타로카드보라색"></a>
+        <a href="#none" class="tarot7"><img src="./images/tarot_pink.png" alt="타로카드핑크색"></a>
+      </div>
+
+      <div class="popup popup1"><!--팝업 배경-->
+        <div><!--가운데 창-->
+            <img src="./images/tarot_popup1.png" alt="갈란투스">
+            <a href="#none"><img src="./images/close.png" alt="취소버튼"></a>
+            <div class="popup_p">
+              <img src="./images/tarot_hover1.png" alt="희망">
+              <p>갈란투스는 작고 연약한<br>
+                꽃처럼 보일 수도 있지만,<br>
+                삶의 문제를 극복하는 힘을 상징한다.<br>
+                현재 견뎌내야할 것들이 많은 상황이지만<br>
+                해야할 것들을 꾸준히 해낸다면<br>
+                겨울이 끝난 뒤 봄에 가장 먼저 꽃을<br>
+                피우는 갈란투스처럼  추후<br>
+                좋은 결실을 얻을 수 있다.</p>
+                <a href="./shop.html"><img src="./images/tarot_hover_cat.png" alt="샵 바로가기 고양이"></a>
+            </div>
+        </div><!--가운데 창-->
+    </div>
+
+    <div class="popup popup2"><!--팝업 배경-->
+      <div><!--가운데 창-->
+          <img src="./images/tarot_popup2.png" alt="튤립">
+          <a href="#none"><img src="./images/close.png" alt="취소버튼"></a>
+          <div class="popup_p">
+            <img src="./images/tarot_hover2.png" alt="사랑">
+              <p>진정으로 사랑하는 사람의<br>
+                곁에서 사랑의 기쁨을 마음껏<br>
+                만끽하는 시기이다.<br>
+                힘들면 그대로 당신의 마음을<br>
+                표현하고 기대는 것이 가장 좋다.<br>
+                그리하면 애정이 배가 될것이다.</p>
+                <a href="./shop.html"><img src="./images/tarot_hover_cat.png" alt="샵 바로가기 고양이"></a>
+          </div>
+      </div><!--가운데 창-->
+  </div>
+
+  <div class="popup popup3"><!--팝업 배경-->
+    <div><!--가운데 창-->
+        <img src="./images/tarot_popup3.png" alt="코스모스">
+        <a href="#none"><img src="./images/close.png" alt="취소버튼"></a>
+        <div class="popup_p">
+          <img src="./images/tarot_hover3.png" alt="조화">
+              <p>다소 복잡한 일이 산재해 있지만 지금의<br>
+                능력으로 충분히 해결할 수 있는 일들이므로, <br>
+                더욱 성장할 수 있는 거름이 되어준다.<br>
+                시작도 전에 포기하는 일이 없도록만 하면<br>
+                다 잘될 것이니 자신을 믿고<br>
+                매사에 당차게 맞서야한다.
+              </p>
+                <a href="./shop.html"><img src="./images/tarot_hover_cat.png" alt="샵 바로가기 고양이"></a>
+        </div>
+    </div><!--가운데 창-->
+</div>
+
+<div class="popup popup4"><!--팝업 배경-->
+  <div><!--가운데 창-->
+      <img src="./images/tarot_popup4.png" alt="블루벨">
+      <a href="#none"><img src="./images/close.png" alt="취소버튼"></a>
+      <div class="popup_p">
+        <img src="./images/tarot_hover4.png" alt="감사">
+              <p>여러가지 일과 만남에서<br>
+                운이 따르는 시기이다.<br>
+                새로운 사람들과의 만남 속에서<br>
+                자신에게 이로운 영향을 줄 수 있는<br>
+                귀인을 만날 수 있으니<br>
+                감사한 마음을 항상 가진다면<br>
+                더욱 오래 운이 지속될 것이다
+                </p>
+                <a href="./shop.html"><img src="./images/tarot_hover_cat.png" alt="샵 바로가기 고양이"></a>
+      </div>
+  </div><!--가운데 창-->
+</div>
+
+<div class="popup popup5"><!--팝업 배경-->
+  <div><!--가운데 창-->
+      <img src="./images/tarot_popup5.png" alt="탄지">
+      <a href="#none"><img src="./images/close.png" alt="취소버튼"></a>
+      <div class="popup_p">
+        <img src="./images/tarot_hover5.png" alt="평화">
+              <p>이래 저래 무던한 일들이 많으니,<br>
+                순조로운 시기이다.<br>
+                특별히 대박의 행운이 찾아오는 것은<br>
+                아니지만 당신의 몫을 해내고<br>
+                계속해서 정진한다면 능력을<br>
+                인정받는 일이 생길 것이고<br>
+                앞길은 더욱 밝게 빛날 것이다.
+              </p>
+                <a href="./shop.html"><img src="./images/tarot_hover_cat.png" alt="샵 바로가기 고양이"></a>
+      </div>
+  </div><!--가운데 창-->
+</div>
+
+<div class="popup popup6"><!--팝업 배경-->
+  <div><!--가운데 창-->
+      <img src="./images/tarot_popup6.png" alt="에키나시아">
+      <a href="#none"><img src="./images/close.png" alt="취소버튼"></a>
+      <div class="popup_p">
+        <img src="./images/tarot_hover6.png" alt="행운">
+              <p>많은 행운이 당신을 기다리고 있다.<br>
+                지금은 당신이 무엇을 하던<br>
+                어디를 가던 길한 시기이므로<br>
+                지금 평소 바래왔던 일들을<br>
+                시도한다면 성공확률이높다.<br>
+                이러한 행운가득한 시기는<br>
+                평생 있을까말까하니 좋은 기회를 잡아라.
+              </p>
+                <a href="./shop.html"><img src="./images/tarot_hover_cat.png" alt="샵 바로가기 고양이"></a>
+      </div>
+  </div><!--가운데 창-->
+</div>
+
+<div class="popup popup7"><!--팝업 배경-->
+  <div><!--가운데 창-->
+      <img src="./images/tarot_popup7.png" alt="금영화">
+      <a href="#none"><img src="./images/close.png" alt="취소버튼"></a>
+      <div class="popup_p">
+        <img src="./images/tarot_hover7.png" alt="성공">
+              <p>
+                좋은 기운이 충만하므로 시작하려고<br>
+                하는 일의 끝에는 성공이 뒤따른다.<br>
+                하고자 했던 일이 있다면 중간에<br>
+                힘든 일이 생겨도 끝까지 포기하지만<br>
+                않는다면 당신이 생각하는 그 이상의<br>
+                결과를 얻을 수 있을 것이니, 전진하라
+              </p>
+                <a href="./shop.html"><img src="./images/tarot_hover_cat.png" alt="샵 바로가기 고양이"></a>
+      </div>
+  </div><!--가운데 창-->
+</div>
+
+        
+      </div><!-- 타로 가운데창 -->
+    </div><!-- 타로 전체박스 -->
+
+    <!-- 인스타그램 계정 -->
+    <div class="marquee">
+      <div></div>
+    </div>
+
+    <!-- 흘러가는 인스타그램 슬라이드 -->
+    <ul id="scroller">
+      <li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram_1.png" alt="1"></a></li>
+      <li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram_2.png" alt="2"></a></li>
+      <li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram_3.png" alt="3"></a></li>
+      <li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram_4.png" alt="4"></a></li>
+      <li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram_5.png" alt="5"></a></li>
+      <li><a href="https://www.instagram.com/" target="_blank"><img src="./images/instagram_6.png" alt="6"></a></li>
+  </ul>
+
+  <!-- 푸터 -->
+  <div class="footer"><!-- 푸터 전체창 -->
+    <div class="footer_inner"><!-- 푸터 중간창 -->
+      <a href="#" class="f_logo"><img src="./images/footer_logo.png" alt="푸터 로고"></a>
+      
+      <p class="notice">
+        <a href="#">공지사항<span></span></a>
+        <a href="#">배송정책<span></span></a>
+        <a href="./Community_Membership.html">회원 멤버쉽<span></span></a>
+      </p>
+      <a href="#" class="customer_service">고객센터
+        <span></span><!--버블-->
+        <span></span><!--버블-->
+        <span></span><!--버블-->
+        <span></span><!--버블-->
+      </a>
+      <p class="footer_margin">고객센터 1660-2686 <br>
+        am 10:00 - pm 18:00 점심시간 13:00 - 14:00(주말&공휴일 휴무)</p>
+        <a href="https://www.instagram.com/" target="_blank" class="insatgram"><img src="./images/f_insatgram.png" alt="푸터 인스타그램아이콘"></a>
+        <a href="https://www.facebook.com/" target="_blank" class="facebook"><img src="./images/f_facebook.png" alt="푸터 페이스북아이콘"></a>
+        <p>칸티오(cantio) ｜ 대표자 조미주 ｜ 사업자 등록번호 268-68-562 ｜ 사업자정보 확인 ｜ 서울특별시 송파구 잠실동 40-1 CNATIO</p>
+        <P>© 2020 cantio. ALL RIGHTS RESERVED</P>
+      
+    </div><!-- 푸터 중간창 -->
+  </div><!-- 푸터 전체창 -->
+
+   
+ 
+
+
+
+
+
+
+
+
+  <!-- 탑버튼 js -->
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script><!-- 제이쿼리 라이브러리,수정X -->
+	<script src="./script/icon.js"></script>
+ 
+  <!-- 페이드배너 js -->
+  <script src="./script/fade_banner.js"></script>
+
+   <!-- 베스트 상품 슬라이드 js -->
+	<script src="./script/swiper.min.js"></script><!-- 수정X -->
+	<script src="./script/gallery.js"></script><!--디자인에 맞게 수정-->
+
+  <!--흘러가는 인스타그램 슬라이드 js-->
+  <script src="script/jquery.simplyscroll.min.js"></script>
+  <script src="./script/simplyscroll.js"></script>
+
+  <!-- 커서 js -->
+  <script src="./script/cursor.js"></script>
+
+  <!--서브메뉴 js-->
+  <script src="./script/menu.js"></script><!--내가 만든 소스-->
+
+  <!-- aos js -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!-- aos 라이브러리 -->
+  <script src="./script/aos.js"></script><!-- aos 소스 -->
+
+  <!--타로 팝업 js-->
+  <script src="./script/popup.js"></script><!--내가 만든 소스-->
+</body>
+</html>

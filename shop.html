@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=1400"><!--다른 매체에서도 너비 오류 없이 볼 수 있게-->
+  
+  <!--파비콘-->
+  <link href="./images/favorites_icon.png" rel="icon" type="image/png" sizes="32x32" >
+
+  <!-- 탑버튼 css -->
+  <link rel="stylesheet" href="./css/icon.css">
+
+  <!-- 베스트 상품 슬라이드 css -->
+	<link href="./css/shop/swiper.css" rel="stylesheet" type="text/css"><!-- 수정X -->
+	<link href="./css/shop/gallery.css" rel="stylesheet" type="text/css"><!--디자인에 맞게 수정-->
+
+  <!-- 셀렉트 css -->
+  <link rel="stylesheet" href="./css/shop/select.css">
+
+  <!-- 인덱스 스타일 css 연결 -->
+  <link rel="stylesheet" href="./css/shop/shop.css">
+  <title>SHOP</title>
+</head>
+<body>
+  <!-- 마우스 커서 -->
+  <div id="drawing_line">
+    <svg class="drawing_line_svg">
+      <circle class="drawing_line_circle" cx="0" cy="0" r="8"></circle>
+      <polyline class="drawing_line_polyline" points=""></polyline>
+    </svg>
+  </div>
+
+  <div id="header"><!-- 헤더 서브메뉴의 기준-->
+    <div class="header_inner"><!-- 헤더 가운데창 -->
+      <ul class="nav">
+        <li><a href="./Brand_Story.html">BRAND</a>
+          <div class="sub sub1"><!-- 배경 -->
+            <div><!-- 가운데창 -->
+              <ul >
+                <li class="sub_b1"><a href="./Brand_Story.html">BRAND STORY<span></span></a></li>
+                <li class="sub_b2"><a href="./Brand_Design.html">BRAND DESIGN<span></span></a></li>
+                <li class="sub_b3"><a href="./store.html">STORE<span></span></a></li>
+              </ul>
+            </div><!-- 가운데창 -->
+          </div><!-- 배경 -->
+        </li>
+        <li><a href="./subscription.html">SUBSCRIPTION</a></li>
+        <li><a href="./Community_event.html">COMMUNITY</a>
+          <div class="sub sub2"><!-- 배경 -->
+            <div><!-- 가운데창 -->
+              <ul>
+                <li class="sub_c1"><a href="./Community_event.html">EVENT / Q&A<span></span></a></li>
+                <li class="sub_c2"><a href="./class.html">CLASS<span></span></a></li>
+                <li class="sub_c3"><a href="./Community_Membership.html">MEMBERSHIP<span></span></a></li>
+              </ul>
+            </div><!-- 가운데창 -->
+          </div><!-- 배경 -->
+        </li>
+        <li><a href="./shop.html">SHOP</a></li>
+      </ul>
+      <a href="./index.html" class="logo"> <!-- 로고 -->
+        <img src="./images/logo.png" alt="로고 앞면">
+        
+      </a>
+    <div class="right"><!-- 위치 기준 -->
+      <div class="right_icon"> <!-- 마이페이지&장바구니 -->
+        <a href="#" class="my"><img src="./images/My_Page_icon.png" alt="마이페이지 아이콘"></a>
+        <a href="#" class="shopping"><img src="./images/shopping_basket_icon.png" alt="장바구니 아이콘"></a>
+      </div><!-- 마이페이지&장바구니 -->
+    </div><!-- 위치 기준 -->
+  </div><!-- 헤더 가운데창 -->
+  <div class="scroll-content"></div>
+  </div><!-- 헤더 서브메뉴의 기준-->
+
+   <!--탑 버튼-->
+   <a href="#" class="top"><img src="./images/top.png" alt="top버튼"></a>
+
+   <!-- 배너 -->
+   <div id="shop_banner">
+    <img src="./images/shop/logo_mark.png" alt="로고마크">
+    <h1>CANTIO SHOP</h1>
+    <a href="./store.html"><h3>오프라인 스토어 보러가기</h3></a>
+    <p>운영시간 : 09:00 ~ 20:00(연중무휴)</p>
+   </div>
+
+   <!-- 베스트상품 -->
+   <!-- Best for you 상품 슬라이드 구문 -->
+   <div class="best_foryou"><h1>BEST FOR YOU</h1></div>
+   <div class="swiper-container gallery">
+    <div class="gallery_inner">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div>
+            <a href="#"><img src="./images/shop/best_2.png" class="b_img" alt="화병">
+                
+            <h3>민무늬 도자기 화병</h3>
+            <p>28,000원</p>
+            <img src="./images/shop/heart.png" class="heart" alt="하트">
+            <img src="./images/shop/shopping_basket.png" class="basket" alt="장바구니">
+            </a>
+           
+          </div>
+          
+        </div>
+        <div class="swiper-slide">
+            <div>
+                <a href="#"><img src="./images/shop/best_1.png" class="b_img" alt="튤립">
+                <h3>영원한 사랑을 담은 튤립_6대</h3>
+                <p>18,900원</p>
+                <img src="./images/shop/heart.png" class="heart" alt="하트">
+            <img src="./images/shop/shopping_basket.png" class="basket" alt="장바구니">
+                </a>
+                
+            </div>
+            
+        
+        </div>
+        <div class="swiper-slide">
+            <div>
+                <a href="#"><img src="./images/shop/best_3.png" class="b_img" alt="영양제">
+                <h3>플라워푸드 1BOX</h3>
+                <p>2,200원</p>
+                <img src="./images/shop/heart.png" class="heart" alt="하트">
+            <img src="./images/shop/shopping_basket.png" class="basket" alt="장바구니">
+                </a>
+                
+            </div>
+            
+        </div>
+        
+      </div>
+      <!-- 화살표 버튼 -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <!-- 블릿 버튼 -->
+      <div class="swiper-pagination"></div>
+      </div>
+  </div>
+ 
+  <!-- 탭 -->
+  <div class="filter">
+    <h1>PRODUCT</h1>
+    <ul>
+      <li id="all" class="active"><a href="#none"><img src="./images/shop/all.png"
+            onmouseover="this.src='./images/shop/all_hover.png'" onmouseout="this.src='./images/shop/all.png'"></a></li>
+      <li id="filter1"><a href="#none"><img src="./images/shop/flower_product.png"
+            onmouseover="this.src='./images/shop/flower_hover.png'"
+            onmouseout="this.src='./images/shop/flower_product.png'" alt="꽃 아이콘"></a></li>
+      <li id="filter2"><a href="#none"><img src="./images/shop/vase_icon.png"
+            onmouseover="this.src='./images/shop/vase_hover.png'" onmouseout="this.src='./images/shop/vase_icon.png'"
+            alt="화병 아이콘"></a></li>
+      <li id="filter3"><a href="#none"><img src="./images/shop/etc_icon.png"
+            onmouseover="this.src='./images/shop/etc_hover.png'" onmouseout="this.src='./images/shop/etc_icon.png'"
+            alt="기타 아이콘"></a></li>
+    </ul>
+    </div>
+  
+  
+    <div class="box">
+      <!-- 폼 셀렉트 -->
+      <div class="selectBox2 ">
+        <button class="label">정렬</button>
+        <ul class="optionList">
+          <li class="optionItem">인기순</li>
+          <li class="optionItem">신상품순</li>
+          <li class="optionItem">가격 높은순</li>
+          <li class="optionItem">가격 낮은순</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- 상품 -->
+    <div class="product_list">
+      <ul class="product">
+        <li>
+          <a href="#">
+            <div class="i_hidden"><!-- 히든 -->
+            <img src="./images/shop/Petunia.png" class="product_img" alt="1">
+            <div class="box_p">
+              <!--배경-->
+              <a href="#none" class="heart_button"><img src="./images/shop/heart_Button.png" alt=""></a>
+              <a href="#none"><img src="./images/shop/shopping_basket_button.png" alt=""></a>
+            </div>
+            <!--배경-->
+            </div><!-- 히든 -->
+            <div class="product_text"><!-- 상품명이랑 가격 -->
+            <a href="#">
+            <h5>편안함을 주는 페튜니아_5대</h5>
+            <p>14,900</p>
+          </a>
+        </div>
+          </a>
+        </li>
+       
+        <li>
+          <a href="#">
+            <div class="i_hidden"><!-- 히든 -->
+            <img src="./images/shop/product_img1.png" class="product_img" alt="1">
+            <img src="./images/shop/best_mark.png" class="best_mark" alt="베스트표시">
+            <h5>영원한 사랑을 담은 튤립_6대</h5>
+            <p>15,000원</p>
+            <div class="box_p">
+              <!--배경-->
+              <a href="#none" class="heart_button"><img src="./images/shop/heart_Button.png" alt=""></a>
+              <a href="#none" class="basket_button"><img src="./images/shop/shopping_basket_button.png" alt=""></a>
+            </div>
+            <!--배경-->
+          </div><!-- 히든 -->
+          <div class="product_text"><!-- 상품명이랑 가격 -->
+          <a href="#">
+            <h5>영원한 사랑을 담은 튤립_6대</h5>
+            <p>11,600원</p>
+          </a>
+        </div>
+          </a>
+        </li>
+       
+        <li>
+          <a href="#">
+            <div class="i_hidden"><!-- 히든 -->
+            <img src="./images/shop/larissa.png" class="product_img" alt="1">
+            
+            <div class="box_p">
+              <!--배경-->
+              <a href="#none" class="heart_button"><img src="./images/shop/heart_Button.png" alt=""></a>
+              <a href="#none"><img src="./images/shop/shopping_basket_button.png" alt=""></a>
+            </div>
+            <!--배경-->
+          </div><!-- 히든 -->
+          <div class="product_text"><!-- 상품명이랑 가격 -->
+          <a href="#">
+            <h5>변치않는 마음, 라시사_4대</h5>
+            <p>11,600원</p>
+          </a>
+        </div>
+          </a>
+        </li>
+        
+        <li>
+          <a href="#">
+            <div class="i_hidden"><!-- 히든 -->
+            <img src="./images/shop/narcissus.png" class="product_img" alt="1">
+            <img src="./images/shop/new_mark.png" class="new_mark" alt="뉴 마크">
+            <div class="box_p">
+              <!--배경-->
+              <a href="#none" class="heart_button"><img src="./images/shop/heart_Button.png" alt=""></a>
+              <a href="#none"><img src="./images/shop/shopping_basket_button.png" alt=""></a>
+            </div>
+            <!--배경-->
+          </div><!-- 히든 -->
+          <div class="product_text"><!-- 상품명이랑 가격 -->
+          <a href="#">
+            <h5>신비로운 수선화_5대</h5>
+            <p>13,900원</p>
+          </a>
+        </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="i_hidden"><!-- 히든 -->
+            <img src="./images/shop/plain_pattern_vase.png" class="product_img" alt="1">
+            <img src="./images/shop/best_mark.png" class="best_mark" alt="베스트표시">
+            <div class="box_p">
+              <!--배경-->
+              <a href="#none" class="heart_button"><img src="./images/shop/heart_Button.png" alt=""></a>
+              <a href="#none"><img src="./images/shop/shopping_basket_button.png" alt=""></a>
+            </div>
+            <!--배경-->
+          </div><!-- 히든 -->
+          <div class="product_text"><!-- 상품명이랑 가격 -->
+          <a href="#">
+            <h5>민무늬 도자기 화병</h5>
+            <p>28,000원</p>
+          </a>
+        </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="i_hidden"><!-- 히든 -->
+            <img src="./images/shop/Kettle_vase.png" class="product_img" alt="1">
+            <img src="./images/shop/new_mark.png" class="new_mark" alt="뉴 마크">
+            <div class="box_p">
+              <!--배경-->
+              <a href="#none" class="heart_button"><img src="./images/shop/heart_Button.png" alt=""></a>
+              <a href="#none"><img src="./images/shop/shopping_basket_button.png" alt=""></a>
+            </div>
+            <!--배경-->
+          </div><!-- 히든 -->
+          <div class="product_text"><!-- 상품명이랑 가격 -->
+          <a href="#"><!-- 상품명 -->
+            <h5>케틀형 모던 화병</h5>
+            <p>35,000원</p>
+          </a>
+        </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="i_hidden"><!-- 히든 -->
+            <img src="./images/shop/Bouquet1.png" class="product_img" alt="1">
+            
+            <div class="box_p">
+              <!--배경-->
+              <a href="#none" class="heart_button"><img src="./images/shop/heart_Button.png" alt=""></a>
+              <a href="#none"><img src="./images/shop/shopping_basket_button.png" alt=""></a>
+            </div>
+            <!--배경-->
+          </div><!-- 히든 -->
+          <div class="product_text"><!-- 상품명이랑 가격 -->
+          <a href="#">
+            <h5>허니 가든 꽃다발</h5>
+            <p>29,900원</p>
+          </a>
+        </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="i_hidden"><!-- 히든 -->
+            <img src="./images/shop/Bouquet2.png" class="product_img" alt="1">
+            
+            <div class="box_p">
+              <!--배경-->
+              <a href="#none" class="heart_button"><img src="./images/shop/heart_Button.png" alt=""></a>
+              <a href="#none"><img src="./images/shop/shopping_basket_button.png" alt=""></a>
+            </div>
+            <!--배경-->
+          </div><!-- 히든 -->
+          <div class="product_text"><!-- 상품명이랑 가격 -->
+          <a href="#">
+            <h5>글로리 데이즈 꽃다발</h5>
+            <p>39,900원</p>
+          </a>
+        </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="i_hidden"><!-- 히든 -->
+            <img src="./images/shop/Scissors.png" class="product_img" alt="1">
+            <img src="./images/shop/best_mark.png" class="best_mark" alt="베스트표시">
+            <div class="box_p">
+              <!--배경-->
+              <a href="#none" class="heart_button"><img src="./images/shop/heart_Button.png" alt=""></a>
+              <a href="#none"><img src="./images/shop/shopping_basket_button.png" alt=""></a>
+            </div>
+            <!--배경-->
+          </div><!-- 히든 -->
+          <div class="product_text"><!-- 상품명이랑 가격 -->
+          <a href="#">
+            <h5>[필수 도구] 중급용 꽃가위</h5>
+            <p>9,000원</p>
+          </a>
+        </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="i_hidden"><!-- 히든 -->
+            <img src="./images/shop/supplements.png" class="product_img" alt="1">
+            <h5>플라워푸드 1BOX</h5>
+            <p>2,200원</p>
+            <div class="box_p">
+              <!--배경-->
+              <a href="#none" class="heart_button"><img src="./images/shop/heart_Button.png" alt=""></a>
+              <a href="#none"><img src="./images/shop/shopping_basket_button.png" alt=""></a>
+            </div>
+            <!--배경-->
+          </div><!-- 히든 -->
+          <div class="product_text"><!-- 상품명이랑 가격 -->
+            <a href="#">
+              <h5>플라워푸드 1BOX</h5>
+              <p>2,200원</p>
+            </a>
+          </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="i_hidden"><!-- 히든 -->
+            <img src="./images/shop/candle.png" class="product_img" alt="1">
+            <img src="./images/shop/new_mark.png" class="new_mark" alt="뉴 마크">
+            <div class="box_p">
+              <!--배경-->
+              <a href="#none" class="heart_button"><img src="./images/shop/heart_Button.png" alt=""></a>
+              <a href="#none"><img src="./images/shop/shopping_basket_button.png" alt=""></a>
+            </div>
+            <!--배경-->
+          </div><!-- 히든 -->
+          <div class="product_text"><!-- 상품명이랑 가격 -->
+            <a href="#">
+              <h5>웨딩데이 캔들</h5>
+              <p>10,000원</p>
+            </a>
+          </div>
+          </a>
+        </li>
+
+        <li>
+          <a href="#">
+            <div class="i_hidden"><!-- 히든 -->
+            <img src="./images/shop/Pouch.png" class="product_img" alt="1">
+            
+            <div class="box_p">
+              <!--배경-->
+              <a href="#none" class="heart_button"><img src="./images/shop/heart_Button.png" alt=""></a>
+              <a href="#none"><img src="./images/shop/shopping_basket_button.png" alt=""></a>
+            </div>
+            <!--배경-->
+          </div><!-- 히든 -->
+          <div class="product_text"><!-- 상품명이랑 가격 -->
+            <a href="#">
+              <h5>[칸티오 심부름꾼 '달이'] 파우치</h5>
+              <p>20,000원</p>
+            </a>
+          </div>
+          </a>
+        </li>
+
+        
+      </ul>
+    </div>
+    
+  
+  <!-- 하단 배너 -->
+   <div class="Living_Banner">
+    <h1>칸티오 리빙용품 <br> OPEN</h1>
+    <a href="#none"><h3>스토어 보러가기</h3></a>
+   </div>
+   
+   
+   
+   
+   <!-- 푸터 -->
+  <div class="footer"><!-- 푸터 전체창 -->
+    <div class="footer_inner"><!-- 푸터 중간창 -->
+      <a href="./index.html" class="f_logo"><img src="./images/footer_logo.png" alt="푸터 로고"></a>
+      
+      <p class="notice">
+        <a href="#">공지사항<span></span></a>
+        <a href="#">배송정책<span></span></a>
+        <a href="./Community_Membership.html">회원 멤버쉽<span></span></a>
+      </p>
+      <a href="#" class="customer_service">고객센터
+        <span></span><!--버블-->
+        <span></span><!--버블-->
+        <span></span><!--버블-->
+        <span></span><!--버블-->
+      </a>
+      <p class="footer_margin">고객센터 1660-2686 <br>
+        am 10:00 - pm 18:00 점심시간 13:00 - 14:00(주말&공휴일 휴무)</p>
+        <a href="https://www.instagram.com/" target="_blank" class="insatgram"><img src="./images/f_insatgram.png" alt="푸터 인스타그램아이콘"></a>
+        <a href="https://www.facebook.com/" target="_blank" class="facebook"><img src="./images/f_facebook.png" alt="푸터 페이스북아이콘"></a>
+        <p>칸티오(cantio) ｜ 대표자 조미주 ｜ 사업자 등록번호 268-68-562 ｜ 사업자정보 확인 ｜ 서울특별시 송파구 잠실동 40-1 CNATIO</p>
+        <P>© 2020 cantio. ALL RIGHTS RESERVED</P>
+      
+    </div><!-- 푸터 중간창 -->
+  </div><!-- 푸터 전체창 -->
+
+
+  <!-- 탑버튼 js -->
+	<script src="https://code.jquery.com/jquery-2.2.0.min.js"></script><!-- 제이쿼리 라이브러리,수정X -->
+	<script src="./script/icon.js"></script>
+
+  <!-- 커서 js -->
+  <script src="./script/cursor.js"></script>
+
+  <!--서브메뉴 js-->
+  <script src="./script/menu.js"></script><!--내가 만든 소스-->
+
+   <!-- 베스트 상품 슬라이드 js -->
+   <script src="./script/swiper.min.js"></script><!-- 수정X -->
+   <script src="./script/gallery.js"></script><!--디자인에 맞게 수정-->
+
+
+   <!-- 셀렉트 js -->
+   <script src="./script/shop/select.js"></script>
+
+  <!-- aos js -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script><!-- aos 라이브러리 -->
+  <script src="./script/aos.js"></script><!-- aos 소스 -->
+</body>
+</html>
