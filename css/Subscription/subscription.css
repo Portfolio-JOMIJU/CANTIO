@@ -195,7 +195,7 @@ display: none;/*서브메뉴 안보이게 만들기*/
     /*로고 가운데*/
     left: 50%;
     top: 50%;
-    margin-left: -29.5px;
+    margin-left: -32.5px;
     /*사진 너비 크기의 반만큼 마이너스*/
     margin-top: -38.5px;
     /*사진 높이 크기의 반만큼 마이너스*/
@@ -229,7 +229,7 @@ display: none;/*서브메뉴 안보이게 만들기*/
 .right_icon{
     position: absolute;
     top: 35px;
-    right: -212px;
+    right: -151px;
     margin: auto;
     z-index: 100;
 }
