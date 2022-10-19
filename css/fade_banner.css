@@ -10,7 +10,6 @@
   .mySlideDiv img{
     min-width: 100%;
     width: 100%;
-    border-radius: 0 0 2000px 2000px;
   }
   /* effect */
   .fade {
@@ -35,7 +34,7 @@
   .prev, .next {
     cursor: pointer;
     position: absolute;
-    top: 290px;	
+    top: 369px;	
     width: auto;
     padding: 16px;
     margin-top: -22px;
